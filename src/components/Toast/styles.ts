@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 import { THEME } from '../../theme';
 import { initialWindowMetrics } from 'react-native-safe-area-context';
 
-console.log(initialWindowMetrics)
 export const styles = StyleSheet.create({
   container: {
     position: 'absolute',

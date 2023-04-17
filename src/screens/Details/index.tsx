@@ -18,6 +18,8 @@ import { Toast } from "../../components/Toast";
 const CHAT_GPD_API_KEY = process.env.CHAT_GPD_API_KEY;
 const GCP_SPEECH_TO_TEXT_KEY = process.env.GCP_SPEECH_TO_TEXT_KEY;
 
+console.log(CHAT_GPD_API_KEY, GCP_SPEECH_TO_TEXT_KEY);
+
 const RECORDING_OPTIONS = {
   android: {
     extension: '.m4a',
@@ -60,6 +62,8 @@ export function Details() {
       Replace the spaces in each word with the character "_".
       Return each item separated by a comma, in lowercase, and without a line break.
     `;
+
+    console.log(prompt);
 
     fetch("https://api.openai.com/v1/engines/text-davinci-003-playground/completions", {
       method: 'POST',
